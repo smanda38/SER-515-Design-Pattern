@@ -1,18 +1,30 @@
-public class ProductIterator {
+import java.util.Iterator;
 
-	public boolean hasNext() {
-		return false;
+public class ProductIterator extends ClassProductList {
+	@SuppressWarnings("rawtypes")
+	public boolean HasNext(Iterator iterator) {
+		return iterator.hasNext();
 	}
 
-	public Product Next() {
-		return null;
+	@SuppressWarnings("rawtypes")
+	public void MoveToHead(Iterator iterator) {
+		System.out.println("Head Moved..");
 	}
 
-	public void MoveToHead() {
-
+	@SuppressWarnings("rawtypes")
+	public String Next(Iterator iterator) {
+		if (this.HasNext(iterator)) {
+			return (String) iterator.next();
+		} else {
+			return null;
+		}
 	}
 
-	public void Remove() {
+	@SuppressWarnings("rawtypes")
+	public void Remove(Iterator iterator) {
+		if (this.HasNext(iterator)) {
+			iterator.next();
+		}
 
 	}
 
