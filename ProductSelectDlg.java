@@ -23,8 +23,8 @@ public class ProductSelectDlg extends JDialog {
 			jbInit();
 			setSize(420, 238);
 			setModal(true);
-		} catch (Exception f) {
-			f.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 
@@ -42,15 +42,15 @@ public class ProductSelectDlg extends JDialog {
 		OKButton.setText("OK");
 		OKButton.setBounds(new Rectangle(78, 139, 79, 29));
 		OKButton.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(ActionEvent f) {
-				OKButton_actionPerformed(f);
+			public void actionPerformed(ActionEvent e) {
+				OKButton_actionPerformed(e);
 			}
 		});
 		buttonLogout.setText("Logout");
 		buttonLogout.setBounds(new Rectangle(224, 140, 73, 31));
 		buttonLogout.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(ActionEvent f) {
-				buttonLogout_actionPerformed(f);
+			public void actionPerformed(ActionEvent e) {
+				buttonLogout_actionPerformed(e);
 			}
 		});
 		this.getContentPane().add(ProductNameCom, null);
