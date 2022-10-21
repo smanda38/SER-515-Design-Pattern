@@ -1,4 +1,4 @@
-package ptbs;
+package ProductTradingBiddingSystem;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,26 +14,26 @@ public class OfferDecideDlg extends JDialog {
 	public OfferDecideDlg() {
 		try {
 			jbInit();
-			setSize(316, 186);
+			setSize(323, 199);
 			setModal(true);
-		} catch (Exception e) {
-			e.printStackTrace();
+		} catch (Exception f) {
+			f.printStackTrace();
 		}
 	}
 
 	private void jbInit() throws Exception {
 		jLabel1.setText("Offering File Name");
-		jLabel1.setBounds(new Rectangle(23, 30, 121, 18));
+		jLabel1.setBounds(new Rectangle(21, 34, 119, 25));
 		this.getContentPane().setLayout(null);
-		ttDecide.setBounds(new Rectangle(25, 66, 100, 22));
+		ttDecide.setBounds(new Rectangle(30, 69, 100, 29));
 		buttonOK.setText("OK");
-		buttonOK.setBounds(new Rectangle(217, 67, 79, 29));
+		buttonOK.setBounds(new Rectangle(220, 72, 84, 33));
 		buttonOK.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				buttonOK_actionPerformed(e);
+			public void actionPerformed(ActionEvent f) {
+				buttonOK_actionPerformed(f);
 			}
 		});
-		labelOfferingFileName.setBounds(new Rectangle(212, 34, 163, 18));
+		labelOfferingFileName.setBounds(new Rectangle(200, 30, 165, 22));
 		this.getContentPane().add(jLabel1, null);
 		this.getContentPane().add(tDecide, null);
 		this.getContentPane().add(labelOfferingFileName, null);
@@ -47,7 +47,7 @@ public class OfferDecideDlg extends JDialog {
 		show();
 	}
 
-	void buttonOK_actionPerformed(ActionEvent e) {
+	void buttonOK_actionPerformed(ActionEvent f) {
 		theOffering.theDecide = Integer.parseInt(ttDecide.getText());
 		hide();
 	}
