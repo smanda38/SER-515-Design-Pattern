@@ -1,27 +1,50 @@
-public class ProduceProductMenu implements  ProductMenu {
+public class ProduceProductMenu extends ProductMenu {
 
-	public void showMenu() {
+	@Override
+	public void ShowAddButton() {
+		System.out.println();
+	}
+
+	@Override
+	public void ShowMenu() {
+		System.out.println();
+	}
+
+	@Override
+	public void ShowViewButton() {
+		System.out.println();
 
 	}
 
-	public void showAddButton() {
+	@Override
+	public void ShowRadioButton() {
+		System.out.println();
 
 	}
 
-	public void showRadioButton() {
+	@Override
+	public void showComboxes() {
+		System.out.println();
 
 	}
 
-	public void showLabels() {
+	@Override
+	public void ShowLabels() {
+		System.out.println();
 
 	}
 
-	public void showViewButton() {
+	public void selectProduct(int USerType) {
+		System.out.println("Produce Product Selected ...\n Bridge Pattern for connection used ");
+		Person person;
+		if (UserType == 0) {
+			person = PersonFactory.createObject("Seller");
 
+		} else
+		{
+			person = PersonFactory.createObject("Buyer");
+
+		}
+		person.ShowMenu();
 	}
-
-	public void showComboxed() {
-
-	}
-
 }
