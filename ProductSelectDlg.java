@@ -1,4 +1,4 @@
-package ptbs;
+package ProductTradingBiddingSystem;
 
 import javax.swing.*;
 import java.awt.*;
@@ -23,8 +23,8 @@ public class ProductSelectDlg extends JDialog {
 			jbInit();
 			setSize(420, 238);
 			setModal(true);
-		} catch (Exception e) {
-			e.printStackTrace();
+		} catch (Exception f) {
+			f.printStackTrace();
 		}
 	}
 
@@ -42,15 +42,15 @@ public class ProductSelectDlg extends JDialog {
 		OKButton.setText("OK");
 		OKButton.setBounds(new Rectangle(78, 139, 79, 29));
 		OKButton.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				OKButton_actionPerformed(e);
+			public void actionPerformed(ActionEvent f) {
+				OKButton_actionPerformed(f);
 			}
 		});
 		buttonLogout.setText("Logout");
 		buttonLogout.setBounds(new Rectangle(224, 140, 73, 31));
 		buttonLogout.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				buttonLogout_actionPerformed(e);
+			public void actionPerformed(ActionEvent f) {
+				buttonLogout_actionPerformed(f);
 			}
 		});
 		this.getContentPane().add(ProductNameCom, null);
@@ -81,7 +81,7 @@ public class ProductSelectDlg extends JDialog {
 		return SelectedProduct;
 	}
 
-	void OKButton_actionPerformed(ActionEvent e) {
+	void OKButton_actionPerformed(ActionEvent f) {
 		SelectedProduct = (Product) ProductNameCom.getSelectedItem();
 		if (MeatRadio.isSelected())
 			nProductLevel = 0; // Meat Product: 0
@@ -94,7 +94,7 @@ public class ProductSelectDlg extends JDialog {
 		return m_bLogout;
 	}
 
-	void buttonLogout_actionPerformed(ActionEvent e) {
+	void buttonLogout_actionPerformed(ActionEvent f) {
 		m_bLogout = true;
 		hide();
 	}
