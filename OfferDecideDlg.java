@@ -16,8 +16,8 @@ public class OfferDecideDlg extends JDialog {
 			jbInit();
 			setSize(323, 199);
 			setModal(true);
-		} catch (Exception f) {
-			f.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 
@@ -29,8 +29,8 @@ public class OfferDecideDlg extends JDialog {
 		buttonOK.setText("OK");
 		buttonOK.setBounds(new Rectangle(220, 72, 84, 33));
 		buttonOK.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(ActionEvent f) {
-				buttonOK_actionPerformed(f);
+			public void actionPerformed(ActionEvent e) {
+				buttonOK_actionPerformed(e);
 			}
 		});
 		labelOfferingFileName.setBounds(new Rectangle(200, 30, 165, 22));
@@ -47,7 +47,7 @@ public class OfferDecideDlg extends JDialog {
 		show();
 	}
 
-	void buttonOK_actionPerformed(ActionEvent f) {
+	void buttonOK_actionPerformed(ActionEvent e) {
 		theOffering.theDecide = Integer.parseInt(ttDecide.getText());
 		hide();
 	}
