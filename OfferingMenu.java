@@ -1,4 +1,4 @@
-package ptbs;
+package ProductTradingBiddingSystem;
 
 import javax.swing.*;
 import java.awt.*;
