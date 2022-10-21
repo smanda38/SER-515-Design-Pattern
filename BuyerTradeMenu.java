@@ -6,7 +6,7 @@ import java.awt.event.*;
 import java.io.*;
 import java.text.DateFormat;
 
-public class BuyerTradingMenu extends TradingMenu
+public class BuyerTradeMenu extends TradingMenu
 {
 ////  class TradingMenu
   private boolean bSubmit=false;
@@ -23,8 +23,8 @@ public class BuyerTradingMenu extends TradingMenu
   JLabel jLabel1 = new JLabel();
   JLabel jLabel2 = new JLabel();
   JLabel jLabel3 = new JLabel();
-  JButton buttonGrade = new JButton();
-  JButton buttonReport = new JButton();
+  JButton buttonDecide = new JButton();
+  JButton buttonDiscuss = new JButton();
   JButton buttonClose = new JButton();
 
   public BuyerTradingMenu()
@@ -53,22 +53,22 @@ public class BuyerTradingMenu extends TradingMenu
     jLabel3.setBounds(new Rectangle(28, 151, 118, 18));
     tbSuggestedOffering.setText("jTextField2");
     tbSuggestedOffering.setBounds(new Rectangle(197, 149, 339, 22));
-    buttonGrade.setText("Grade");
-    buttonGrade.setBounds(new Rectangle(458, 199, 79, 29));
-    buttonGrade.addActionListener(new java.awt.event.ActionListener()
+    buttonDecide.setText("Decide");
+    buttonDecide.setBounds(new Rectangle(458, 199, 79, 29));
+    buttonDecide.addActionListener(new java.awt.event.ActionListener()
     {
       public void actionPerformed(ActionEvent e)
       {
-        buttonGrade_actionPerformed(e);
+        buttonDecide_actionPerformed(e);
       }
     });
-    buttonReport.setText("Report");
-    buttonReport.setBounds(new Rectangle(365, 249, 79, 29));
-    buttonReport.addActionListener(new java.awt.event.ActionListener()
+    buttonDiscuss.setText("Discuss");
+    buttonDiscuss.setBounds(new Rectangle(365, 249, 79, 29));
+    buttonDiscuss.addActionListener(new java.awt.event.ActionListener()
     {
       public void actionPerformed(ActionEvent e)
       {
-        buttonReport_actionPerformed(e);
+        buttonDiscuss_actionPerformed(e);
       }
     });
     buttonClose.setText("Close");
@@ -89,8 +89,8 @@ public class BuyerTradingMenu extends TradingMenu
     this.getContentPane().add(tbSuggestedOffering, null);
     this.getContentPane().add(buttonClose, null);
     this.getContentPane().add(CombOfferingList, null);
-    this.getContentPane().add(buttonGrade, null);
-    this.getContentPane().add(buttonReport, null);
+    this.getContentPane().add(buttonDecide, null);
+    this.getContentPane().add(buttonDiscuss, null);
   }
   public void ShowMenu(Trading Trading, Person person)
   {
@@ -117,23 +117,23 @@ public class BuyerTradingMenu extends TradingMenu
     hide();
   }
 
-  void buttonGrade_actionPerformed(ActionEvent e)
+  void buttonDecide_actionPerformed(ActionEvent e)
   {
     Offering theOffering=(Offering)CombOfferingList.getSelectedItem() ;
     if (theOffering==null)
        return;
-    OfferingGradingDlg dlg=new OfferingGradingDlg();
+    OfferingDecidingDlg dlg=new OfferingDecidingDlg();
     dlg.show(theOffering);
     refreshOfferingList();
   }
 
-  void buttonReport_actionPerformed(ActionEvent e)
+  void buttonDiscuss_actionPerformed(ActionEvent e)
   {
     OfferingIterator iter=new OfferingIterator(theTrading.theOfferingList );
     while(iter.hasNext() )
     {
       Offering aOffering=(Offering)iter.next();
-      aOffering.setReported(true);
+      aOffering.setDiscussed(true);
     }
     refreshOfferingList();
   }
