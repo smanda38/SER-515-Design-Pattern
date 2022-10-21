@@ -1,4 +1,4 @@
-package ptbs;
+package ProductTradingBiddingSystem;
 
 public class UserInfoItem {
 
