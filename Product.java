@@ -1,4 +1,4 @@
-package hacs;
+package ProductTradingBiddingSystem;
 
 import java.util.*;
 
