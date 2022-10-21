@@ -1,10 +1,10 @@
-package ptbs;
+package ProductTradingBiddingSystem;
 
-public class ptbs {
+public class ProductTradingBiddingSystem {
 
 	static Facade theFacade = new Facade();
 
-	public ptbs() {
+	public ProductTradingBiddingSystem() {
 	}
 
 	public static void main(String[] args) {
