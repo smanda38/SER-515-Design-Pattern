@@ -1,8 +1,8 @@
-package ptbs;
+package ProductTradingBiddingSystem;
 
 import javax.swing.*;
 
-import ptbs.UserInfoItem.USER_TYPE;
+import ProductTradingBiddingSystem.UserInfoItem.USER_TYPE;
 
 import java.awt.*;
 import java.awt.event.*;
