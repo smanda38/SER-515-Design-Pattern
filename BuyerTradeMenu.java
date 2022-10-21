@@ -1,4 +1,4 @@
-package ptbs;
+package ProductTrainingBiddingSystem;
 
 import javax.swing.*;
 import java.awt.*;
